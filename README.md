@@ -1,4 +1,8 @@
 # Travel Trip Project
+http://travelandtrip.somee.com/Login/Login
+kullanıcı adı: admin
+şifre: 1234
+
 
 # Admin Paneli
 ![Ekran görüntüsü 2024-12-17 195755](https://github.com/user-attachments/assets/077bdb8f-23b2-4544-a4f0-4944dba69e9c)
