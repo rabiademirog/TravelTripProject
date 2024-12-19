@@ -1,0 +1,93 @@
+﻿@model TravelTripProject.Models.Sınıflar.Contact
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<style>
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: 1px solid #c3e6cb;
+        text-align: center;
+    }
+
+    .alert-success p {
+        margin: 0;
+    }
+    button.btn {
+        background-color: transparent;
+        color: rgb(162, 54, 90);
+        padding: 12px 24px; 
+        border: 2px solid rgb(162, 54, 90); 
+        border-radius: 5px; 
+        font-size: 16px;
+        cursor: pointer; 
+        transition: all 0.3s ease; 
+    }
+
+        button.btn:hover {
+            background-color: rgb(162, 54, 90) 
+            color: white; 
+        }
+
+        button.btn:active {
+            background-color: rgb(162, 54, 90);
+            border-color: rgb(162, 54, 90);
+        }
+</style>
+
+<div class="contact">
+    <div class="wrap">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+        <div class="contact-top">
+            <h3>Contact Information</h3>
+            <p> Benimle İletişime Geçin! </p>
+        </div>
+        <div class="form">
+            <form class="form-group" method="post">
+                <label>Ad Soyad</label>
+                @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+                <br />
+                <label>Telefon</label>
+                @Html.TextBoxFor(x => x.Telephone, new { @class = "form-control" })
+                <br />
+                <label>Mesaj</label>
+                @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+                <br />
+                <div>
+                    <button class="btn btn-default">Gönder</button>
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>
+        <div class="contact-bottom">
+            <div class="contact-left">
+                <div class="contact-add">
+                    <h3>Addres</h3>
+                    <p>Telefon:1-22-5555</p>
+                    <p>Fax:1-22-5555</p>
+                    <p>Mail:<a href="mailto:rabiademirog@gmail.com">rabiademirog@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe width="580" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.5488662786954!2d28.67414291525585!3d41.00023736677475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c0dcb9b8fcd839%3A0x2c26e07d2c9c7d9e!2sBeylikd%C3%BCz%C3%BC%2C%20Istanbul%2C%20Turkey!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br>
+                <small><a href="https://www.google.com/maps?q=Beylikdüzü" style="color: #555; text-align:left">View Larger Map</a></small>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
